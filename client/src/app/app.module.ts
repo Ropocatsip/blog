@@ -10,7 +10,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MemberComponent } from './component/member/member.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SocialLoginModule } from '@abacritt/angularx-social-login';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { SocialLoginModule } from '@abacritt/angularx-social-login';
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    ReactiveFormsModule,
-    SocialLoginModule
+    ReactiveFormsModule
   ],
   providers: [
     
