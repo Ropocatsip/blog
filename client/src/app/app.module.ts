@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MemberComponent } from './component/member/member.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,22 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SocialLoginModule
   ],
   providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false, //keeps the user signed in
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider('978330329246-q8hmevbhghu95lv23lu149m6sm0lcq3m.apps.googleusercontent.com') // your client id
+          }
+        ],
+      } as SocialAuthServiceConfig,
+    }
     
   ],
   bootstrap: [AppComponent]
