@@ -11,6 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MemberComponent } from './component/member/member.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
+import { PolicyComponent } from './component/policy/policy.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 
     HomeComponent,
     BlogSeaComponent,
     BlogPistachioComponent,
-    MemberComponent
+    MemberComponent,
+    PolicyComponent
   ],
   imports: [
     BrowserModule,
