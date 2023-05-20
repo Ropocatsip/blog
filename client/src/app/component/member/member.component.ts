@@ -2,7 +2,6 @@ import { GoogleLoginProvider, SocialAuthService, SocialUser } from '@abacritt/an
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-
 @Component({
   selector: 'app-member',
   templateUrl: './member.component.html',
@@ -35,6 +34,10 @@ export class MemberComponent implements OnInit {
 
   logOut(): void {
     this.socialAuthService.signOut();
+  }
+
+  refreshToken(): void {
+    this.socialAuthService.refreshAuthToken(GoogleLoginProvider.PROVIDER_ID);
   }
 
 }
