@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
 import { PolicyComponent } from './component/policy/policy.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,7 @@ import { PolicyComponent } from './component/policy/policy.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
@@ -34,7 +37,7 @@ import { PolicyComponent } from './component/policy/policy.component';
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {
-        autoLogin: false, //keeps the user signed in
+        autoLogin: true, //keeps the user signed in
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,

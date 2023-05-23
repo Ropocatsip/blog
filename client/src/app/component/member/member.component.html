@@ -15,19 +15,20 @@
 </header>
 
 <button type="button" (click)="loginWithGoogle()" class="btn btn-danger">Login with Google</button>
+<asl-google-signin-button type='icon' size='medium'></asl-google-signin-button>
 <div id="g_id_onload"
-         data-client_id="978330329246-q8hmevbhghu95lv23lu149m6sm0lcq3m.apps.googleusercontent.com"
-         data-login_uri=""
-         data-auto_prompt="false">
-      </div>
-      <div class="g_id_signin"
-         data-type="standard"
-         data-size="large"
-         data-theme="outline"
-         data-text="sign_in_with"
-         data-shape="rectangular"
-         data-logo_alignment="left">
-      </div>
+  data-client_id="978330329246-q8hmevbhghu95lv23lu149m6sm0lcq3m.apps.googleusercontent.com"
+  data-login_uri=""
+  data-auto_prompt="false">
+</div>
+<div class="g_id_signin"
+    data-type="standard"
+    data-size="large"
+    data-theme="outline"
+    data-text="sign_in_with"
+    data-shape="rectangular"
+    data-logo_alignment="left">
+</div>
 
 <div *ngIf="isLoggedin === false">
     <div>
